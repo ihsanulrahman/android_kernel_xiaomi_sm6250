@@ -205,6 +205,7 @@ static int cass_select_task_rq_fair(struct task_struct *p, int prev_cpu,
 	 * first valid CPU since it's possible for certain types of tasks to run
 	 * on inactive CPUs.
 	 */
+
 	if (unlikely(!cpumask_intersects(&p->cpus_allowed, cpu_active_mask)))
 		return cpumask_first(&p->cpus_allowed);
 
